@@ -1,4 +1,4 @@
-const URL_BASE = "[rickandmortyapi.com](https://rickandmortyapi.com/api/character)";
+const URL_BASE = "https://rickandmortyapi.com/api/character";
 
 const listaPersonagens = document.querySelector("#lista-personagens");
 const mensagemStatus = document.querySelector("#mensagem-status");
