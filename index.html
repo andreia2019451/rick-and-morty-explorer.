@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Aplicação front-end que apresenta personagens de Rick and Morty por meio de uma API pública."
+    >
+
+    <title>Portal Multiverso | Rick and Morty</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="navegacao" aria-label="Navegação principal">
+            <a class="logo" href="#inicio">Portal Multiverso</a>
+
+            <ul class="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#personagens">Personagens</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-conteudo">
+                <p class="destaque">Explore diferentes dimensões</p>
+
+                <h1>Conheça o universo de Rick and Morty</h1>
+
+                <p>
+                    Pesquise personagens e descubra informações atualizadas
+                    diretamente da Rick and Morty API.
+                </p>
+
+                <a class="botao-principal" href="#personagens">
+                    Explorar personagens
+                </a>
+            </div>
+        </section>
+
+        <section class="secao-personagens" id="personagens">
+            <div class="titulo-secao">
+                <p class="destaque">Dados obtidos em tempo real</p>
+                <h2>Personagens do multiverso</h2>
+                <p>
+                    Os cards abaixo são criados dinamicamente pelo JavaScript.
+                </p>
+            </div>
+
+            <form class="filtros" id="form-busca">
+                <div class="campo-busca">
+                    <label for="busca">Nome do personagem</label>
+
+                    <input
+                        type="search"
+                        id="busca"
+                        name="busca"
+                        placeholder="Ex.: Rick, Morty ou Summer"
+                        autocomplete="off"
+                    >
+                </div>
+
+                <div class="campo-busca">
+                    <label for="status">Status</label>
+
+                    <select id="status" name="status">
+                        <option value="">Todos</option>
+                        <option value="alive">Vivo</option>
+                        <option value="dead">Morto</option>
+                        <option value="unknown">Desconhecido</option>
+                    </select>
+                </div>
+
+                <button class="botao-busca" type="submit">Buscar</button>
+                <button class="botao-limpar" id="limpar" type="button">
+                    Limpar
+                </button>
+            </form>
+
+            <p
+                class="mensagem-status"
+                id="mensagem-status"
+                role="status"
+                aria-live="polite"
+            >
+                Carregando personagens...
+            </p>
+
+            <div
+                class="lista-personagens"
+                id="lista-personagens"
+                aria-live="polite"
+            ></div>
+
+            <div class="paginacao">
+                <button id="anterior" type="button">Página anterior</button>
+
+                <span id="informacao-pagina">Página 1</span>
+
+                <button id="proxima" type="button">Próxima página</button>
+            </div>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <div>
+                <p class="destaque">Sobre o projeto</p>
+                <h2>Integração entre interface e API</h2>
+            </div>
+
+            <p>
+                Este site foi desenvolvido com HTML, CSS e JavaScript puro.
+                A aplicação utiliza Fetch API para buscar informações públicas
+                e cria os cards com manipulação do DOM.
+            </p>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>
+            Projeto acadêmico desenvolvido por
+            <strong>Andreia Ribeiro</strong> -
+            <span id="ano"></span>
+        </p>
+
+        <p>
+            Dados fornecidos pela
+            <a
+                href="[rickandmortyapi.com](https://rickandmortyapi.com/)"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Rick and Morty API
+            </a>.
+        </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
