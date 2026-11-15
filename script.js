@@ -245,3 +245,4 @@ botaoProxima.addEventListener("click", () => {
 document.querySelector("#ano").textContent = new Date().getFullYear();
 
 carregarPersonagens();
+carregarpersonagens();
